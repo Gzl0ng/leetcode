@@ -15,12 +15,14 @@ public class PrimeFactor {
 //        Scanner sc = new Scanner(System.in);
 //        long num = sc.nextLong();
 
-        int num = 1321;
+        int num = 180;
         long k = (long)Math.sqrt(num);
 
-        for (int i = 0; i < k; i++) {
-            System.out.println(i + " ");
-            num/=i;
+        for (int i = 2; i < k; i++) {
+            while (num%i ==0){
+                System.out.print(i + " ");
+                num/=i;
+            }
         }
         System.out.println(num==1?"":num+"");
     }
